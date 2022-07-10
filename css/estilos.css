@@ -172,9 +172,13 @@ footer .datos {
 
 /** Aca comienza Inicio **/
 
-#inicio .cohete {
+#inicio .div-cohete{
+    height: 410px;
+}#inicio .cohete{
     height: 400px;
 }
+#inicio .cohete:hover{
+    height: 410px;}
 
 
 #inicio .input-home p {
