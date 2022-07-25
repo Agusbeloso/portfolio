@@ -13,7 +13,7 @@
                 Sponsor: <a href="https://depcsuite.com/" target="_blank">DePc Suite</a>
             </div>
             <div class="col-3">
-                Email: <a href="mailto:belosoan@gmail.com"></a>
+                Email: <a href="mailto:belosoan@gmail.com">belosoan@gmail.com</a>
             </div>
         </div>
     </footer>

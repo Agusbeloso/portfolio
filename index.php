@@ -58,7 +58,7 @@
                 Email: <a href="mailto:belosoan@gmail.com">belosoan@gmail.com</a>
             </div>
         </div>
-    </footer>
+        
 
 
 </body>
