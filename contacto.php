@@ -1,5 +1,43 @@
 <?php
     $pg = "contacto";
+
+    if($_POST){
+        $nombre = $_POST["txtNombre"];
+        $correo = $_POST["txtCorreo"];
+        $telefono = $_POST["txtTelefono"];
+        $mensaje = $_POST["txtMensaje"];
+        
+        if ($nombre != "" && $correo != "" && $telefono != "" && $mensaje != "")
+
+        // Varios destinatarios
+        $para = "belosoan@gmail.com";
+        $titulo = 'Recibiste un mensaje desde tu Web';
+    
+        // mensaje
+        $cuerpo = "
+        Nombre: $nombre <br>
+        Correo: $correo <br>
+        Telefono: $telefono <br>
+        Mensaje: $mensaje
+        ";
+    
+        // Para enviar un correo HTML, debe establecerse la cabecera Content-type
+        $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+        $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+    
+        // Cabeceras adicionales
+        $cabeceras .= 'To: belosoan@gmail.com' . "\r\n";
+        $cabeceras .= 'From: contacto@nelsontarche.com.ar' . "\r\n";
+    
+        // Enviarlo
+        //mail($para, $titulo, $cuerpo, $cabeceras);
+        header("Location: confirmacion-envio.php");
+    }
+    ?>
+    
+
+
+
 ?>
 
 
@@ -21,7 +59,6 @@
 <body id="contacto" class="d-flex flex-column h-100">
     <header class="container pt-2">
     <?php include_once "menu.php"?>
-    </header>
     <main class="container">
         <div class="row">
             <div class="col-12 pt-3 pb-5">
@@ -73,10 +110,10 @@
                 Sponsor: <a href="https://depcsuite.com/" target="_blank">DePc Suite</a>
             </div>
             <div class="col-3">
-                Email: <a href="mailto:belosoan@gmail.com">belosoan@gmail.com</a>
+                Email: <a href="mailto:belosoan@gmail.com"></a>
             </div>
         </div>
-    </footer>
+        <?php include_once "footer.php";?>
 
 
 </body>
